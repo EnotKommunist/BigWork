@@ -58,25 +58,21 @@ class MapApp(QtWidgets.QMainWindow, Ui_MainWindow):
             if self.y >= 90:
                 self.y = -89
             self.show_map()
-            print("Вверх")
         elif key == Qt.Key_Down:
             self.y -= 90 / (self.z * 2000)
             if self.y <= -90:
                 self.y = 89
             self.show_map()
-            print("Вниз")
         elif key == Qt.Key_Left:
             self.x -= 180 / (self.z * 2000)
             if self.x <= -180:
                 self.x = 179
             self.show_map()
-            print("Влево")
         elif key == Qt.Key_Right:
             self.x += 180 / (self.z * 2000)
             if self.x >= 180:
                 self.x = -179
             self.show_map()
-            print("Враво")
 
     def show_object(self):
         if not self.search_line.text():
